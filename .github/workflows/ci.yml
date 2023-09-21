@@ -9,8 +9,6 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - name building
-        working-directory: ./morotsman-nx-demo
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
