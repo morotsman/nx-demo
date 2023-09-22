@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@morotsman-nx-demo/button-library": ["button-library/src/index.ts"]
+      "@morotsman-nx-demo/button-library": ["button-library/src/index.ts"],
+      "@morotsman-nx-demo/input-library": ["input-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
