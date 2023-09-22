@@ -7,6 +7,7 @@ export function App() {
     <div>
       <h1>Welcome to replace</h1>
       <MyButton title="Press to replace" />
+      <p>test</p>
     </div>
   );
 }
