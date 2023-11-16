@@ -9,7 +9,7 @@ export function App() {
       <h1>Welcome to replace</h1>
       What would you like to replace?<MyInput/>
       <MyButton title="Press to replace" />
-      <p>test</p>
+      <p>test2</p>
     </div>
   );
 }
