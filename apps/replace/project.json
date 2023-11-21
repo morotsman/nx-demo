@@ -72,6 +72,49 @@
       "options": {
         "buildTarget": "replace:build"
       }
+    },
+    "storybook": {
+      "executor": "@nx/storybook:storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/replace/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nx/storybook:build",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/replace",
+        "configDir": "apps/replace/.storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/replace/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "replace:build-storybook",
+        "staticFilePath": "dist/storybook/replace"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "replace:build-storybook:ci"
+        }
+      }
     }
   },
   "tags": []
